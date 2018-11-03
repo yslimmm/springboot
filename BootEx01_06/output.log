@@ -1,0 +1,24 @@
+2018-11-03 15:33:23,759 DEBUG [main] hr.UserDao        ( UserDao.java:91)     - sql : DELETE FROM users WHERE u_id = ?
+2018-11-03 15:33:23,835 DEBUG [main] hr.UserDao        ( UserDao.java:98)     - flag : 1
+2018-11-03 15:33:23,837 DEBUG [main] hr.UserDaoTest    (UserDaoTest.java:21)     - delete result : 1
+2018-11-03 15:33:23,866 DEBUG [main] hr.UserDao        ( UserDao.java:68)     - sql : INSERT INTO users(u_id, name, password) VALUES(?, ?, ?)
+2018-11-03 15:33:23,867 DEBUG [main] hr.UserDao        ( UserDao.java:77)     - flag : 1
+2018-11-03 15:33:23,896 DEBUG [main] hr.UserDao        ( UserDao.java:35)     - sql : SELECT u_id, name, password FROM users WHERE u_id = ?
+2018-11-03 15:33:23,909 DEBUG [main] hr.UserDao        ( UserDao.java:53)     - user : User [u_id=yslim_119, name=임예슬, password=1234]
+2018-11-03 15:33:23,910 DEBUG [main] hr.UserDaoTest    (UserDaoTest.java:35)     - 등록 성공
+2018-11-03 15:37:42,444 DEBUG [main] hr.UserDao        ( UserDao.java:91)     - sql : DELETE FROM users WHERE u_id = ?
+2018-11-03 15:37:42,530 DEBUG [main] hr.UserDao        ( UserDao.java:98)     - flag : 1
+2018-11-03 15:37:42,532 DEBUG [main] hr.UserDaoTest    (UserDaoTest.java:21)     - delete result : 1
+2018-11-03 15:37:42,559 DEBUG [main] hr.UserDao        ( UserDao.java:68)     - sql : INSERT INTO users(u_id, name, password) VALUES(?, ?, ?)
+2018-11-03 15:37:42,561 DEBUG [main] hr.UserDao        ( UserDao.java:77)     - flag : 1
+2018-11-03 15:37:42,591 DEBUG [main] hr.UserDao        ( UserDao.java:35)     - sql : SELECT u_id, name, password FROM users WHERE u_id = ?
+2018-11-03 15:37:42,605 DEBUG [main] hr.UserDao        ( UserDao.java:53)     - user : User [u_id=yslim_119, name=임예슬, password=1234]
+2018-11-03 15:37:42,607 DEBUG [main] hr.UserDaoTest    (UserDaoTest.java:35)     - 등록 성공
+2018-11-03 15:49:42,459 DEBUG [main] hr.UserDao        ( UserDao.java:91)     - sql : DELETE FROM users WHERE u_id = ?
+2018-11-03 15:49:42,536 DEBUG [main] hr.UserDao        ( UserDao.java:98)     - flag : 1
+2018-11-03 15:49:42,538 DEBUG [main] hr.UserDaoTest    (UserDaoTest.java:21)     - delete result : 1
+2018-11-03 15:49:42,568 DEBUG [main] hr.UserDao        ( UserDao.java:68)     - sql : INSERT INTO users(u_id, name, password) VALUES(?, ?, ?)
+2018-11-03 15:49:42,569 DEBUG [main] hr.UserDao        ( UserDao.java:77)     - flag : 1
+2018-11-03 15:49:42,598 DEBUG [main] hr.UserDao        ( UserDao.java:35)     - sql : SELECT u_id, name, password FROM users WHERE u_id = ?
+2018-11-03 15:49:42,611 DEBUG [main] hr.UserDao        ( UserDao.java:53)     - user : User [u_id=yslim_119, name=임예슬, password=1234]
+2018-11-03 15:49:42,613 DEBUG [main] hr.UserDaoTest    (UserDaoTest.java:35)     - 등록 성공

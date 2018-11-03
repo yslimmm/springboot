@@ -1,0 +1,13 @@
+2018-11-03 12:38:21,888 DEBUG [main] hr.UserDao        ( UserDao.java:28)     - sql : 
+INSERT INTO users(u_id, name, password) VALUES(?, ?, ?) 
+
+2018-11-03 12:38:21,965 DEBUG [main] hr.UserDao        ( UserDao.java:37)     - flag : 
+1
+2018-11-03 14:18:47,433 DEBUG [main] hr.UserDao        ( UserDao.java:69)     - sql : 
+INSERT INTO users(u_id, name, password) VALUES(?, ?, ?)
+2018-11-03 14:18:47,517 DEBUG [main] hr.UserDao        ( UserDao.java:78)     - flag : 1
+2018-11-03 14:18:47,547 DEBUG [main] hr.UserDao        ( UserDao.java:29)     - sql : 
+SELECT u_id, name, password FROM users WHERE u_id = ? 
+
+2018-11-03 14:18:47,574 DEBUG [main] hr.UserDao        ( UserDao.java:47)     - user : User [u_id=yslim_119, name=임예슬, password=1234]
+2018-11-03 14:18:47,575 DEBUG [main] hr.UserDaoTest    (UserDaoTest.java:25)     - 등록 성공
