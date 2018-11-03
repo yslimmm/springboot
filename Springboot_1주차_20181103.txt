@@ -1,0 +1,92 @@
+* 스프링부트란
+> 베이스는 자바
+> 스프링을 간략화
+> 스프링mvc는 xml베이스에서 boot는 스크립트 베이스, 어노테이션 위주로 변화됨
+> http://zanywitch.tistory.com/91
+
+* 환경설정
+> Java
+	JAVA_HOME
+	C:\Program Files\Java\jdk1.8.0_171
+	PATH
+	C:\Program Files\Java\jdk1.8.0_171\bin
+	
+	java --vserion
+	
+> Spring Boot CLI
+	http://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/
+	1.5.18-bin.zip 다운
+	
+	SPRING_HOME
+	D:\yslim\SpringBoot_20181103\soc\spring-1.5.18.BUILD-SNAPSHOT
+	PATH
+	D:\yslim\SpringBoot_20181103\soc\spring-1.5.18.BUILD-SNAPSHOT\bin
+	
+	spring --version
+	spring cli버전이 확인되면 정상 설치가 된 것이다.
+	
+> Maven
+	역할 : 1. 빌드, 2. 라이브러리 관리
+	https://maven.apache.org/download.cgi?Preferred=ftp%3A%2F%2Fapache.cs.utah.edu%2Fapache.org%2F
+	3.6.0-bin.zip 다운
+	
+	MAVEN_HOME
+	D:\apache-maven-3.6.0
+	PATH
+	D:\apache-maven-3.6.0\bin
+	
+	mvn -vserion
+
+* CLI
+	Spring boot 프로젝트 구성
+	cmd
+	$> cd {workspace 경로}
+	$> spring init --build gradle myapp
+	* gradle : 스크립트 언어, 컴파일만 스크립트로 하는 것.
+	
+	$> spring init -dweb,data-jpa,h2,thymeleaf --build maven myapp --force
+	* 스프링 환경을 셋팅한다.(jpa, h2디비셋팅 등 요건 디펜던시에 다 들어간다. 그리고 빌드는 메이븐으로 --force:덮어쓰기)
+	
+	D:\yslim\SpringBoot_20181103\workspace\myapp\src\main\java\com\example\myapp\SimpleWebController.java 소스 구현
+	
+	* maven으로 실행
+	$> cd D:\yslim\SpringBoot_20181103\workspace\myapp
+	* pom.xml 파일이 있는 경로로 이동
+	$> mvn spring-boot:run
+	* 라이브러리 다운과 내장톰캣을 띄운다.
+	
+	* localhost:8080 접근
+	
+	* spring cli로 실행
+	$> cd D:\yslim\SpringBoot_20181103\workspace\myapp\src\main\java\com\example\myapp
+	$> spring run *.java
+	
+	* pom.xml 파일에 대해 확인하기. (pom.xml의 주석 참고)
+	
+* 스프링 이니셜라이져
+	https://start.spring.io/
+	적당한 그룹명과 프로젝트명 입력 후 디펜던시는 Web,Jpa,devtools 로 작성후 제너레이트 버튼
+
+* STS 다운
+	https://spring.io/tools3/sts/all
+
+* Spring 기본정리
+	1. OOP
+	2. test
+		- JUnit
+
+IoC		: 제어의 역전
+	- 객체는 스스로 안만들고 스프링이 만들어준다. 만들어서 넣어주는 것이다.
+DI		: 의존성 주입
+	- 
+AOP		: 관점지향 프로그램
+
+
+* 클래스 설정과 XML 설정의 대응 항목(BootEx01_07)
+				자바 코드					|		XML 설정	
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+빈 설정 파일	: @Configuration				|	<beans>
+빈 이름		: @Bean 메소드 이름				|	<bean id="메소드 이름"
+빈 클래스	: return new BeanClassName()	|	class="com.sist.hr.UserDao"
+
+

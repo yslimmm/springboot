@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- 빈 생성 -->
+	<bean id="connectionMaker" class="com.sist.hr.NConnectionMaker" />
+	
+	<bean id="userDao" class="com.sist.hr.UserDao">
+		<!-- 만들어진 빈을 해당 빈에 속성으로 주입한다. -->
+		<!-- ref="connectionMaker" 해당 id를 참조한다. 
+			 name="connectionMaker" name은 관례적으로 set을 떼버린다. 
+			  아래 속성은 setConnectionMaker을 주입한 것이다. -->
+		<property name="connectionMaker" ref="connectionMaker"></property>
+	</bean>
+
+
+</beans>
