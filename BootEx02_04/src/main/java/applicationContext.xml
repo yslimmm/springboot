@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
+
+	<bean id = "dao" class="com.sist.hr.MemberDao" />
+	<bean id = "loggingAOP" class="com.sist.hr.LoggingAOP" />
+	
+	<!-- AOP Config -->
+	<aop:config>
+		<!-- advice 등록  order 순서 1번째로 -->
+		<aop:aspect ref="loggingAOP" order="1">
+			
+			<!-- 
+				* PointCut
+				필터링된 조인 포인트를 의미
+				트랜잭션 처리하는 공통 기능이 있으면 등록/수정/삭제 기능에는 동작을 해야 한다.
+				단 조회 기능에는 동작할 필요가 없다.
+			
+				리턴 타입		패키지 경로						클래스명		메소드
+				*			com.sist.aop.advice...		*Impl 		*(...)
+				*			com.sist.aop.advice...		*Impl 		*Tx(...) // 트랜잭션을 한다는 의미의 메소드
+	 		-->
+			<aop:before method="logging" pointcut="execution(* com.sist.hr.MemverDao.*(..))" />
+		</aop:aspect>
+	</aop:config>
+	
+</beans>
