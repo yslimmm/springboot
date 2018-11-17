@@ -1,0 +1,109 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.sist.hr</groupId>
+  <artifactId>BootEx03_01</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>BootEx03_01</name>
+  <url>http://maven.apache.org</url>
+
+  <properties> 
+  
+    <org.aspectjtools.version>1.8.13</org.aspectjtools.version>
+    <org.aspectjrt.version>1.5.3</org.aspectjrt.version>
+    <org.aspectj.version>1.8.13</org.aspectj.version>
+    <junit.version>4.12</junit.version>
+    <org.springframework.version>4.3.18.RELEASE</org.springframework.version>
+    <log4j.version>1.2.17</log4j.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <downloadSources>true</downloadSources>
+    <downloadJavadocs>true</downloadJavadocs>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>    
+  </properties>
+	<!-- Oracle repository -->
+  <repositories>
+  	<repository>
+  		<id>oracle</id>
+  		<name>ORACLE JDBC Repository</name>
+  		<url>http://www.datanucleus.org/downloads/maven2</url>
+  	</repository>
+  
+  </repositories>
+
+  <dependencies>
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjtools -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjtools</artifactId>
+	    <version>${org.aspectjtools.version}</version>
+	</dependency>
+
+  
+	<!-- https://mvnrepository.com/artifact/aspectj/aspectjrt -->
+	<dependency>
+	    <groupId>aspectj</groupId>
+	    <artifactId>aspectjrt</artifactId>
+	    <version>${org.aspectjrt.version}</version>
+	</dependency>
+
+  
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>${org.aspectj.version}</version>
+	</dependency>
+
+  
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-test</artifactId>
+	    <version>${org.springframework.version}</version>
+	    <scope>test</scope>
+	</dependency>
+  
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>${org.springframework.version}</version>
+	</dependency>
+
+  
+	<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
+	<dependency>
+	    <groupId>oracle</groupId>
+	    <artifactId>ojdbc6</artifactId>
+	    <version>11.2.0.3</version>
+	</dependency>
+
+  
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>${org.springframework.version}</version>
+	</dependency>
+  
+	<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>${log4j.version}</version>
+	</dependency>
+  
+   
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    
+  </dependencies>
+</project>
