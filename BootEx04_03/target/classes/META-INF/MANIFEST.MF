@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: BootEx04_03
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: user
+Implementation-Vendor-Id: com.sist.hr
+Build-Jdk: 1.8.0_171
+Implementation-URL: http://projects.spring.io/spring-boot/BootEx04_03/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
